@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!text) {
         alert('Isi tugas terlebih dahulu');
         return;
+      } if (!date) {
+        alert('Isi tanggal terlebih dahulu');
+        return;
       }
 
       const todo = { id: Date.now(), text, date: date || null, completed: false };
@@ -72,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     filtered.forEach((todo, index) => {
       const id = todo.id;
 
-      // Card view
       if (todoList) {
         const li = document.createElement("li");
         li.className = "todo-item" + (todo.completed ? " completed" : "");
@@ -112,7 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // show empty state when no items after filtering
     if (filtered.length === 0) {
       if (todoList) {
         const emptyLi = document.createElement('div');
