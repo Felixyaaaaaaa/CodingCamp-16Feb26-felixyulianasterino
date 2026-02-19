@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css" />
+      </head>
+  <body>
+  <div class="container">
+      <div class="card">
+    <h1>Todo-List</h1>
+
+    <div class="stats">
+      <div class="stat">
+        <h4>Total Tasks</h4>
+        <p id="totalTasks">0</p>
+      </div>
+      <div class="stat">
+        <h4>Completed</h4>
+        <p id="completedTasks">0</p>
+      </div>
+      <div class="stat">
+        <h4>Pending</h4>
+        <p id="pendingTasks">0</p>
+      </div>
+      <div class="stat">
+        <h4>Progress</h4>
+        <p id="progressPercent">0%</p>
+      </div>
+    </div>
+
+    <div class="progress-bar">
+      <div id="progressFill"></div>
+    </div>
+
+    <form id="todoForm" class="form">
+      <input type="text" id="todoInput" placeholder="Add a task..." />
+      <input type="date" id="dateInput" />
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="filter-section">
+      <div class="filter-segment" role="tablist" aria-label="Filter tasks">
+        <button class="seg-btn" data-filter="all" aria-pressed="true">All</button>
+        <button class="seg-btn" data-filter="pending" aria-pressed="false">Pending</button>
+        <button class="seg-btn" data-filter="completed" aria-pressed="false">Completed</button>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table id="todoTable">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Task</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+    </body>
+</html>
